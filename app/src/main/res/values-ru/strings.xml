@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Тихий спутник</string>
+    <string name="dark_mode">ТЕМНЫЙ РЕЖИМ</string>
+    <string name="notifications">УВЕДОМЛЕНИЯ</string>
+    <string name="emergency_contact_list">СПИСОК ЭКСТРЕННЫХ КОНТАКТОВ</string>
+    <string name="notification_message">Выберите экстренный контакт, чтобы телефон не переводился в тихий режим, когда они звонят.</string>
+    <string name="privacy_policy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</string>
+    <string name="privacy_message">Прочтите нашу последнюю обновленную политику</string>
+    <string name="settings">Настройки</string>
+    <string name="add">Добавить</string>
+    <string name="schedule_name">Название расписания</string>
+    <string name="Add_Schedules">Добавить расписания</string>
+    <string name="initial_time">Начальное время</string>
+    <string name="final_time">Конечное время</string>
+    <string name="silent_mode">Тихий режим</string>
+    <string name="vibration_mode">Режим вибрации</string>
+    <string name="location">Местоположение</string>
+    <string name="cancel">Отменить</string>
+    <string name="everyday">Каждый день</string>
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+    <string name="ok">ОК</string>
+    <string name="app_icon">Иконка приложения</string>
+    <string name="current_location">Перейти к текущему местоположению</string>
+    <string name="coordinates">Координаты</string>
+    <string name="update_shedules">Обновить расписания</string>
+    <string name="update">Обновить</string>
+    <string name="contact_name">Имя контакта</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="delete_contact">Удалить контакт</string>
+    <string name="names">Имена</string>
+    <string name="mode">Режим</string>
+    <string name="days">Дни</string>
+    <string name="delete_schedule">Удалить расписание</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Выберите язык</string>
+    <string name="Tutorial">Руководство</string>
+    <string name="Tutorial_text">Научитесь использовать это приложение</string>
+    <string name="permissions_check_required">Требуется проверка разрешений</string>
+    <string name="permission_des">Для корректной работы функций приложения необходимо предоставить все необходимые разрешения.</string>
+
+</resources>

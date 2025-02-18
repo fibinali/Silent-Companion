@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Silent Companion</string>
+    <string name="dark_mode">ഇരുണ്ട മോഡ്</string>
+    <string name="notifications">അറിയിപ്പുകൾ</string>
+    <string name="emergency_contact_list">ആശങ്കാ ബന്ധപ്പെടലുകൾ</string>
+    <string name="notification_message">ഫോണിൽ വിളിക്കാൻ വിളിക്കുന്നവർക്ക് ശാന്ത മോഡ് പ്രയോഗിക്കാതെ പോയതിന് ഒരു പ്രചോദനമായി ആശങ്കാ ബന്ധപ്പെടലുകൾ തിരഞ്ഞെടുക്കുക.</string>
+    <string name="privacy_policy">സ്വകാര്യതാ നയം</string>
+    <string name="privacy_message">നമ്മുടെ പുതിയ നയം വായിക്കുക</string>
+    <string name="settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="add">ചേർക്കുക</string>
+    <string name="schedule_name">ക്രമീകരണത്തിന്റെ പേര്</string>
+    <string name="Add_Schedules">ക്രമീകരണങ്ങൾ ചേർക്കുക</string>
+    <string name="initial_time">ആരംഭം</string>
+    <string name="final_time">അവസാന</string>
+    <string name="silent_mode">നിശബ്ദം മോഡ്</string>
+    <string name="vibration_mode">വൈബ്രേഷൻ</string>
+    <string name="location">പ്രദേശത്ത്</string>
+    <string name="cancel">റദ്ദാക്കുക</string>
+    <string name="everyday">എല്ലാ ദിവസവും</string>
+    <string name="monday">ചൊവ്വാഴ്ച</string>
+    <string name="tuesday">ബുധനാഴ്ച</string>
+    <string name="wednesday">വ്യാഴാഴ്ച</string>
+    <string name="thursday">വെള്ളിയാഴ്ച</string>
+    <string name="friday">ശുക്രവാരം</string>
+    <string name="saturday">ശനിയാഴ്ച</string>
+    <string name="sunday">ഞായറാഴ്ച</string>
+    <string name="ok">ശരി</string>
+    <string name="app_icon">ആപ്പ് ഐക്കൺ</string>
+    <string name="current_location">നിലവിലെ സ്ഥലം കാണുക</string>
+    <string name="coordinates">നിർദ്ദിഷ്ട സ്ഥാനം</string>
+    <string name="update_shedules">ക്രമീകരണങ്ങൾ അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="update">മാറ്റുക</string>
+    <string name="contact_name">ബന്ധപ്പെടുന്ന വ്യക്തിയുടെ പേര്</string>
+    <string name="phone_number">ഫോൺ നമ്പർ</string>
+    <string name="delete_contact">ബന്ധപ്പെടൽ ഇല്ലാതാക്കുക</string>
+    <string name="names">പേര്</string>
+    <string name="mode">മോഡ്</string>
+    <string name="days">ദിവസങ്ങൾ</string>
+    <string name="delete_schedule">ക്രമീകരണങ്ങൾ ഇല്ലാതാക്കുക</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">ഭാഷ തിരഞ്ഞെടുക്കുക</string>
+    <string name="Tutorial">ട്യൂട്ടോറിയൽ</string>
+    <string name="Tutorial_text">ഈ ആപ്പ് എങ്ങനെ ഉപയോഗിക്കാമെന്ന് പഠിക്കൂ</string>
+    <string name="permissions_check_required">അനുമതികൾ പരിശോധിക്കുക ആവശ്യമാണ്</string>
+    <string name="permission_des">ആപ്പ് ഫീച്ചറുകൾ സുഗമമായി പ്രവർത്തിക്കാൻ ആവശ്യമായ എല്ലാ അനുമതികളും അനുവദിക്കണം.</string>
+
+</resources>

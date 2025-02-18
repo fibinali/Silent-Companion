@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="light_black">#3f3f3f</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_blue">#052AF2</color>
+    <color name="accent_orange">#FF5722</color>
+    <color name="grey">#5b5b5b</color>
+    <color name="polygon_outline">#FF0000</color> <!-- Red outline -->
+    <color name="polygon_fill">#FFFF0000</color> <!-- Transparent red fill -->
+    <color name="MainColor">#B0BEC5</color>
+    <color name="LightMainColor">#CADBE4</color>
+    <color name="LightGray">#e2e2e2</color>
+</resources>

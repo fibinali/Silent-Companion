@@ -1,0 +1,80 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">静默伴侣</string>
+    <string name="dark_mode">黑暗模式</string>
+    <string name="notifications">通知</string>
+    <string name="emergency_contact_list">紧急联系人列表</string>
+    <string name="notification_message">选择一个紧急联系人，以防他们打电话时手机进入静音模式。</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="privacy_message">阅读我们最新更新的隐私政策</string>
+    <string name="settings">设置</string>
+    <string name="add">添加</string>
+    <string name="schedule_name">日程名称</string>
+    <string name="Add_Schedules">添加日程</string>
+    <string name="initial_time">起始时间</string>
+    <string name="final_time">结束时间</string>
+    <string name="silent_mode">静音模式</string>
+    <string name="vibration_mode">震动模式</string>
+    <string name="location">位置</string>
+    <string name="cancel">取消</string>
+    <string name="everyday">每天</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期天</string>
+    <string name="ok">确定</string>
+    <string name="app_icon">应用图标</string>
+    <string name="current_location">去当前位置</string>
+    <string name="coordinates">坐标</string>
+    <string name="update_shedules">更新日程</string>
+    <string name="update">更新</string>
+    <string name="contact_name">联系人姓名</string>
+    <string name="phone_number">电话号码</string>
+    <string name="delete_contact">删除联系人</string>
+    <string name="names">姓名</string>
+    <string name="mode">模式</string>
+    <string name="days">天</string>
+    <string name="delete_schedule">删除日程</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">选择语言</string>
+    <string name="Tutorial">教程</string>
+    <string name="Tutorial_text">学习如何使用此应用</string>
+
+    <string name="main_page">主页</string>
+    <string name="settings_text">1. 设置按钮：点击设置按钮以自定义应用首选项、管理通知并根据需要调整其他功能。</string>
+    <string name="schedule_text">2. 日程安排：在这里查看您保存的所有日程安排。每个日程都包括时间、位置和静音模式设置，以自动管理您手机的音量。</string>
+    <string name="add_schedule_text">3. 添加日程按钮：点击添加日程按钮以创建一个新的静音模式日程。设置时间、位置和日期，以自动化您的手机音量设置。</string>
+    <string name="add_shedule_page">添加日程页面</string>
+    <string name="settings_text1">1. 设置：访问应用设置以配置首选项、管理通知并自定义静音模式行为。</string>
+    <string name="schedule_nametext">2. 日程名称：为您的日程输入名称，以便在已保存的日程列表中轻松识别。</string>
+    <string name="time_text">3. 开始时间和结束时间：设置自动启用静音模式的时间范围。</string>
+    <string name="mode_text">4. 静音或振动模式：根据您的偏好选择是否启用静音模式或振动模式。</string>
+    <string name="location_text">5. 位置：选择应用该日程的地点。当进入指定区域时，手机将切换到静音模式。</string>
+    <string name="days_text">6. 选择星期几：选择此日程应激活的日期。您可以选择特定日期或设置为每天。</string>
+    <string name="okBtn_text">7. 确定按钮：点击确定按钮保存您的日程，并根据所选设置激活。</string>
+    <string name="currentloc_text">1. 当前地点：点击获取您当前的地理位置。这将作为静音模式区域的中心点。</string>
+    <string name="radius_text">2. 选择半径：选择静音模式将在进入该区域时激活的半径范围。</string>
+    <string name="okButton_text">3. 确定按钮：点击确定按钮确认您的位置和半径选择。</string>
+    <string name="i_understand_it">我明白了</string>
+    <string name="permissions_check_required">اجازت کی جانچ ضروری ہے</string>
+    <string name="permission_des">ایپ کی خصوصیات کو ہموار طریقے سے چلانے کے لیے تمام ضروری اجازتیں دینا لازمی ہے۔</string>
+
+</resources>

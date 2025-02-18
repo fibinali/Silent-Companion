@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Тихий супутник</string>
+    <string name="dark_mode">ТЕМНА ТЕМА</string>
+    <string name="notifications">ПОВІДОМЛЕННЯ</string>
+    <string name="emergency_contact_list">СПИСОК КОНТАКТІВ УРАЖЕНИЙ</string>
+    <string name="notification_message">Виберіть контакт для запобігання вхідного дзвінка під час активації режиму мовчання.</string>
+    <string name="privacy_policy">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</string>
+    <string name="privacy_message">Прочитайте нашу останню політику оновлень</string>
+    <string name="settings">Налаштування</string>
+    <string name="add">Додати</string>
+    <string name="schedule_name">Назва розкладу</string>
+    <string name="Add_Schedules">Додати розклади</string>
+    <string name="initial_time">Час початку</string>
+    <string name="final_time">Час закінчення</string>
+    <string name="silent_mode">Режим мовчання</string>
+    <string name="vibration_mode">Режим вібрації</string>
+    <string name="location">Місцезнаходження</string>
+    <string name="cancel">Скасувати</string>
+    <string name="everyday">Кожного дня</string>
+    <string name="monday">Понеділок</string>
+    <string name="tuesday">Вівторок</string>
+    <string name="wednesday">Середа</string>
+    <string name="thursday">Четвер</string>
+    <string name="friday">П’ятниця</string>
+    <string name="saturday">Субота</string>
+    <string name="sunday">Неділя</string>
+    <string name="ok">ОК</string>
+    <string name="app_icon">Іконка додатка</string>
+    <string name="current_location">Перейти до поточного місцезнаходження</string>
+    <string name="coordinates">Координати</string>
+    <string name="update_shedules">Оновити розклади</string>
+    <string name="update">Оновити</string>
+    <string name="contact_name">Ім’я контакту</string>
+    <string name="phone_number">Номер телефону</string>
+    <string name="delete_contact">Видалити контакт</string>
+    <string name="names">Імена</string>
+    <string name="mode">Режим</string>
+    <string name="days">Дні</string>
+    <string name="delete_schedule">Видалити розклад</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Виберіть мову</string>
+    <string name="Tutorial">Посібник</string>
+    <string name="Tutorial_text">Дізнайтесь, як користуватись цим додатком</string>
+    <string name="permissions_check_required">Потрібна перевірка дозволів</string>
+    <string name="permission_des">Усі необхідні дозволи мають бути надані, щоб функції додатка працювали безперебійно.</string>
+
+</resources>

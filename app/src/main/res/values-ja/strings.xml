@@ -1,0 +1,80 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">サイレントコンパニオン</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="notifications">通知</string>
+    <string name="emergency_contact_list">緊急連絡先リスト</string>
+    <string name="notification_message">電話が鳴ったときに電話をサイレントモードにしないように緊急連絡先を選択してください。</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="privacy_message">最新の更新されたポリシーをお読みください</string>
+    <string name="settings">設定</string>
+    <string name="add">追加</string>
+    <string name="schedule_name">スケジュール名</string>
+    <string name="Add_Schedules">スケジュールを追加</string>
+    <string name="initial_time">開始時間</string>
+    <string name="final_time">終了時間</string>
+    <string name="silent_mode">サイレントモード</string>
+    <string name="vibration_mode">バイブレーションモード</string>
+    <string name="location">場所</string>
+    <string name="cancel">キャンセル</string>
+    <string name="everyday">毎日</string>
+    <string name="monday">月曜日</string>
+    <string name="tuesday">火曜日</string>
+    <string name="wednesday">水曜日</string>
+    <string name="thursday">木曜日</string>
+    <string name="friday">金曜日</string>
+    <string name="saturday">土曜日</string>
+    <string name="sunday">日曜日</string>
+    <string name="ok">OK</string>
+    <string name="app_icon">アプリアイコン</string>
+    <string name="current_location">現在地に移動</string>
+    <string name="coordinates">座標</string>
+    <string name="update_shedules">スケジュールを更新</string>
+    <string name="update">更新</string>
+    <string name="contact_name">連絡先名</string>
+    <string name="phone_number">電話番号</string>
+    <string name="delete_contact">連絡先を削除</string>
+    <string name="names">名前</string>
+    <string name="mode">モード</string>
+    <string name="days">曜日</string>
+    <string name="delete_schedule">スケジュールを削除</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">言語を選択</string>
+
+    <string name="Tutorial">チュートリアル</string>
+    <string name="Tutorial_text">このアプリの使い方を学ぶ</string>
+    <string name="main_page">メインページ</string>
+    <string name="settings_text">1. 設定ボタン：設定ボタンをタップしてアプリの設定をカスタマイズし、通知を管理し、必要に応じてその他の機能を調整します。</string>
+    <string name="schedule_text">2. スケジュール：ここで保存したすべてのスケジュールを表示します。各スケジュールには、時間、場所、そしてサウンド管理のためのサイレントモードの設定が含まれています。</string>
+    <string name="add_schedule_text">3. スケジュール追加ボタン：スケジュール追加ボタンをタップして新しいサイレントモードのスケジュールを作成します。時間、場所、曜日を設定して、電話の音設定を自動化します。</string>
+    <string name="add_shedule_page">スケジュール追加ページ</string>
+    <string name="settings_text1">1. 設定：アプリの設定にアクセスして、好みを設定し、通知を管理し、サイレントモードの動作をカスタマイズします。</string>
+    <string name="schedule_nametext">2. スケジュール名：スケジュールの名前を入力して、保存されたスケジュールリストで簡単に識別できるようにします。</string>
+    <string name="time_text">3. 開始時刻と終了時刻：サイレントモードを自動的に有効にする時間範囲を設定します。</string>
+    <string name="mode_text">4. サイレントモードまたはバイブレーションモード：スケジュールをサイレントモードまたはバイブレーションモードで有効にするかを選択します。</string>
+    <string name="location_text">5. 場所：スケジュールを適用する場所を選択します。指定されたエリアに入ると、電話はサイレントモードに切り替わります。</string>
+    <string name="days_text">6. 曜日の選択：このスケジュールを有効にする曜日を選択します。特定の日を選択するか、毎日適用することができます。</string>
+    <string name="okBtn_text">7. OKボタン：OKボタンをタップしてスケジュールを保存し、選択した設定に基づいてスケジュールを有効にします。</string>
+    <string name="currentloc_text">1. 現在の位置：現在位置を取得するためにタップします。これがサイレントモードエリアの中心点として使用されます。</string>
+    <string name="radius_text">2. 半径の選択：サイレントモードが有効になるエリアの半径を選択します。</string>
+    <string name="okButton_text">3. 位置選択のOKボタン：OKボタンをタップして、位置と半径の選択を確認します。</string>
+    <string name="i_understand_it">理解しました</string>
+    <string name="permissions_check_required">権限チェックが必要です</string>
+    <string name="permission_des">アプリの機能をスムーズに動作させるために、すべての必要な権限を許可する必要があります。</string>
+
+</resources>

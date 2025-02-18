@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Tihi pratilac</string>
+    <string name="dark_mode">TAMNI REŽIM</string>
+    <string name="notifications">OBAVEŠTENJA</string>
+    <string name="emergency_contact_list">LISTA HITNIH KONTAKATA</string>
+    <string name="notification_message">Izaberite hitni kontakt da biste sprečili da telefon bude utišan kada vas pozovu.</string>
+    <string name="privacy_policy">POLITIKA PRIVATNOSTI</string>
+    <string name="privacy_message">Pročitajte našu najnoviju politiku</string>
+    <string name="settings">Podešavanja</string>
+    <string name="add">Dodaj</string>
+    <string name="schedule_name">Ime rasporeda</string>
+    <string name="Add_Schedules">Dodaj rasporede</string>
+    <string name="initial_time">Početno vreme</string>
+    <string name="final_time">Krajnje vreme</string>
+    <string name="silent_mode">Tihi režim</string>
+    <string name="vibration_mode">Režim vibracije</string>
+    <string name="location">Lokacija</string>
+    <string name="cancel">Otkaži</string>
+    <string name="everyday">Svaki dan</string>
+    <string name="monday">Ponedeljak</string>
+    <string name="tuesday">Utorak</string>
+    <string name="wednesday">Sreda</string>
+    <string name="thursday">Četvrtak</string>
+    <string name="friday">Petak</string>
+    <string name="saturday">Subota</string>
+    <string name="sunday">Nedelja</string>
+    <string name="ok">U redu</string>
+    <string name="app_icon">Ikona aplikacije</string>
+    <string name="current_location">Idi na trenutnu lokaciju</string>
+    <string name="coordinates">Koordinate</string>
+    <string name="update_shedules">Ažuriraj rasporede</string>
+    <string name="update">Ažuriraj</string>
+    <string name="contact_name">Ime kontakta</string>
+    <string name="phone_number">Broj telefona</string>
+    <string name="delete_contact">Obriši kontakt</string>
+    <string name="names">Imena</string>
+    <string name="mode">Režim</string>
+    <string name="days">Dani</string>
+    <string name="delete_schedule">Obriši raspored</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Izaberite jezik</string>
+    <string name="Tutorial">Uputstvo</string>
+    <string name="Tutorial_text">Naučite kako da koristite ovu aplikaciju</string>
+    <string name="permissions_check_required">Провера дозвола је обавезна</string>
+    <string name="permission_des">Све неопходне дозволе морају бити одобрене да би функције апликације исправно радиле.</string>
+
+</resources>

@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">خاموش ساتھی</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="notifications">اطلاعات</string>
+    <string name="emergency_contact_list">ہنگامی رابطوں کی فہرست</string>
+    <string name="notification_message">فون کو خاموش کرنے سے روکنے کے لئے ہنگامی رابطہ منتخب کریں جب وہ کال کریں۔</string>
+    <string name="privacy_policy">پرائیویسی پالیسی</string>
+    <string name="privacy_message">ہماری تازہ ترین پالیسی پڑھیں</string>
+    <string name="settings">ترتیبات</string>
+    <string name="add">شامل کریں</string>
+    <string name="schedule_name">شیڈول کا نام</string>
+    <string name="Add_Schedules">شیڈول شامل کریں</string>
+    <string name="initial_time">آغاز کا وقت</string>
+    <string name="final_time">اختتام کا وقت</string>
+    <string name="silent_mode">خاموش موڈ</string>
+    <string name="vibration_mode">ویبریشن موڈ</string>
+    <string name="location">مقام</string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="everyday">روزانہ</string>
+    <string name="monday">پیر</string>
+    <string name="tuesday">منگل</string>
+    <string name="wednesday">بدھ</string>
+    <string name="thursday">جمعرات</string>
+    <string name="friday">جمعہ</string>
+    <string name="saturday">ہفتہ</string>
+    <string name="sunday">اتوار</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="app_icon">ایپ کا آئیکن</string>
+    <string name="current_location">موجودہ مقام پر جائیں</string>
+    <string name="coordinates">ہم آہنگی</string>
+    <string name="update_shedules">شیڈولز کو اپ ڈیٹ کریں</string>
+    <string name="update">اپ ڈیٹ کریں</string>
+    <string name="contact_name">رابطہ کا نام</string>
+    <string name="phone_number">فون نمبر</string>
+    <string name="delete_contact">رابطہ حذف کریں</string>
+    <string name="names">نام</string>
+    <string name="mode">موڈ</string>
+    <string name="days">دن</string>
+    <string name="delete_schedule">شیڈول حذف کریں</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">زبان منتخب کریں</string>
+    <string name="Tutorial">ٹیوٹوریل</string>
+    <string name="Tutorial_text">اس ایپ کو استعمال کرنا سیکھیں</string>
+    <string name="permissions_check_required">Потрібна перевірка дозволів</string>
+    <string name="permission_des">Усі необхідні дозволи мають бути надані, щоб функції додатка працювали безперебійно.</string>
+
+</resources>

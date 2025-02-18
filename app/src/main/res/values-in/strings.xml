@@ -1,0 +1,64 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Pendamping Diam</string>
+    <string name="dark_mode">MODE GELAP</string>
+    <string name="notifications">NOTIFIKASI</string>
+    <string name="emergency_contact_list">DAFTAR KONTAK DARURAT</string>
+    <string name="notification_message">Pilih kontak darurat untuk mencegah ponsel dimatikan saat mereka menelepon.</string>
+    <string name="privacy_policy">KEBIJAKAN PRIVASI</string>
+    <string name="privacy_message">Baca kebijakan terbaru kami</string>
+    <string name="settings">Pengaturan</string>
+    <string name="add">Tambah</string>
+    <string name="schedule_name">Nama Jadwal</string>
+    <string name="Add_Schedules">Tambah Jadwal</string>
+    <string name="initial_time">Waktu Awal</string>
+    <string name="final_time">Waktu Akhir</string>
+    <string name="silent_mode">Mode Senyap</string>
+    <string name="vibration_mode">Mode Getar</string>
+    <string name="location">Lokasi</string>
+    <string name="cancel">Batal</string>
+    <string name="everyday">Setiap Hari</string>
+    <string name="monday">Senin</string>
+    <string name="tuesday">Selasa</string>
+    <string name="wednesday">Rabu</string>
+    <string name="thursday">Kamis</string>
+    <string name="friday">Jumat</string>
+    <string name="saturday">Sabtu</string>
+    <string name="sunday">Minggu</string>
+    <string name="ok">OK</string>
+    <string name="app_icon">Ikon Aplikasi</string>
+    <string name="current_location">Pergi ke Lokasi Saat Ini</string>
+    <string name="coordinates">Koordinat</string>
+    <string name="update_shedules">Perbarui Jadwal</string>
+    <string name="update">Perbarui</string>
+    <string name="contact_name">Nama Kontak</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="delete_contact">Hapus Kontak</string>
+    <string name="names">Nama</string>
+    <string name="mode">Mode</string>
+    <string name="days">Hari</string>
+    <string name="delete_schedule">Hapus Jadwal</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Pilih Bahasa</string>
+
+    <string name="Tutorial">Tutorial</string>
+    <string name="Tutorial_text">Impara a usare questa app</string>
+    <string name="permissions_check_required">Pemeriksaan Izin Diperlukan</string>
+    <string name="permission_des">Semua izin yang diperlukan harus diberikan agar fitur aplikasi dapat berfungsi dengan lancar.</string>
+
+</resources>

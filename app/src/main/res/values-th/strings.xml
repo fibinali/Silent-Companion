@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">เพื่อนเงียบ</string>
+    <string name="dark_mode">โหมดมืด</string>
+    <string name="notifications">การแจ้งเตือน</string>
+    <string name="emergency_contact_list">รายชื่อผู้ติดต่อฉุกเฉิน</string>
+    <string name="notification_message">เลือกผู้ติดต่อฉุกเฉินเพื่อป้องกันไม่ให้โทรศัพท์ถูกตั้งเป็นโหมดเงียบเมื่อพวกเขาโทรมา</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="privacy_message">อ่านนโยบายล่าสุดของเรา</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="add">เพิ่ม</string>
+    <string name="schedule_name">ชื่อกำหนดการ</string>
+    <string name="Add_Schedules">เพิ่มกำหนดการ</string>
+    <string name="initial_time">เวลาเริ่มต้น</string>
+    <string name="final_time">เวลาสิ้นสุด</string>
+    <string name="silent_mode">โหมดเงียบ</string>
+    <string name="vibration_mode">โหมดสั่น</string>
+    <string name="location">ตำแหน่ง</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="everyday">ทุกวัน</string>
+    <string name="monday">จันทร์</string>
+    <string name="tuesday">อังคาร</string>
+    <string name="wednesday">พุธ</string>
+    <string name="thursday">พฤหัสบดี</string>
+    <string name="friday">ศุกร์</string>
+    <string name="saturday">เสาร์</string>
+    <string name="sunday">อาทิตย์</string>
+    <string name="ok">ตกลง</string>
+    <string name="app_icon">ไอคอนแอป</string>
+    <string name="current_location">ไปยังตำแหน่งปัจจุบัน</string>
+    <string name="coordinates">พิกัด</string>
+    <string name="update_shedules">อัปเดตกำหนดการ</string>
+    <string name="update">อัปเดต</string>
+    <string name="contact_name">ชื่อผู้ติดต่อ</string>
+    <string name="phone_number">หมายเลขโทรศัพท์</string>
+    <string name="delete_contact">ลบผู้ติดต่อ</string>
+    <string name="names">ชื่อ</string>
+    <string name="mode">โหมด</string>
+    <string name="days">วัน</string>
+    <string name="delete_schedule">ลบกำหนดการ</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">เลือกภาษา</string>
+    <string name="Tutorial">คำแนะนำ</string>
+    <string name="Tutorial_text">เรียนรู้วิธีการใช้แอปนี้</string>
+    <string name="permissions_check_required">จำเป็นต้องตรวจสอบการอนุญาต</string>
+    <string name="permission_des">ต้องอนุญาตการเข้าถึงทั้งหมดที่จำเป็นเพื่อให้ฟีเจอร์ของแอปทำงานได้อย่างราบรื่น</string>
+
+</resources>

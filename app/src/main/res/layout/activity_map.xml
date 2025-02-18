@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map View -->
+
+    <!-- ImageButton for Current Location -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <ImageButton
+        android:id="@+id/btnGoToCurrentLocation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/coordinatesTextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boxes"
+        android:contentDescription="@string/current_location"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_currentgps" />
+
+    <!-- Spinner for Radius Selection -->
+    <Spinner
+        android:id="@+id/spinnerRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coordinatesTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/boxes"
+        android:entries="@array/radius_values"
+        android:minWidth="86dp"
+        android:minHeight="48dp"
+        style="@style/text"
+        android:padding="10dp"
+        android:spinnerMode="dropdown"/>
+
+
+    <!-- TextView for Coordinates -->
+    <TextView
+        android:id="@+id/coordinatesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coordinates"
+        android:textSize="16sp"
+        style="@style/text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <!-- OK Button positioned at the bottom-right corner -->
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        style="@style/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="20dp" />
+
+</RelativeLayout>

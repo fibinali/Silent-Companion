@@ -1,0 +1,65 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Silent Companion</string>
+    <string name="dark_mode">DUNKLER MODUS</string>
+    <string name="notifications">BENACHRICHTIGUNGEN</string>
+    <string name="emergency_contact_list">NOTFALL KONTAKTLISTE</string>
+    <string name="notification_message">Wählen Sie einen Notfallkontakt aus, um zu verhindern, dass das Telefon stummgeschaltet wird, wenn er anruft.</string>
+    <string name="privacy_policy">DATENSCHUTZRICHTLINIE</string>
+    <string name="privacy_message">Lesen Sie unsere neueste aktualisierte Richtlinie</string>
+    <string name="settings">Einstellungen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="schedule_name">Zeitplanname</string>
+    <string name="Add_Schedules">Zeitpläne hinzufügen</string>
+    <string name="initial_time">Startzeit</string>
+    <string name="final_time">Endzeit</string>
+    <string name="silent_mode">Stummmodus</string>
+    <string name="vibration_mode">Vibrationsmodus</string>
+    <string name="location">Standort</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="everyday">Jeden Tag</string>
+    <string name="monday">Montag</string>
+    <string name="tuesday">Dienstag</string>
+    <string name="wednesday">Mittwoch</string>
+    <string name="thursday">Donnerstag</string>
+    <string name="friday">Freitag</string>
+    <string name="saturday">Samstag</string>
+    <string name="sunday">Sonntag</string>
+    <string name="ok">OK</string>
+    <string name="app_icon">App-Symbol</string>
+    <string name="current_location">Gehe zum aktuellen Standort</string>
+    <string name="coordinates">Koordinaten</string>
+    <string name="update_shedules">Zeitpläne aktualisieren</string>
+    <string name="update">Aktualisieren</string>
+    <string name="contact_name">Kontakname</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="delete_contact">Kontakt löschen</string>
+    <string name="names">Namen</string>
+    <string name="mode">Modus</string>
+    <string name="days">Tage</string>
+    <string name="delete_schedule">Zeitplan löschen</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Sprache auswählen</string>
+
+    <string name="Tutorial">Tutorial</string>
+    <string name="Tutorial_text">Lernen Sie, wie man diese App benutzt</string>
+    <string name="permissions_check_required">Berechtigungsprüfung erforderlich</string>
+    <string name="permission_des">Alle erforderlichen Berechtigungen müssen erteilt werden, damit die App-Funktionen reibungslos funktionieren.</string>
+
+
+</resources>

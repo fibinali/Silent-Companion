@@ -1,0 +1,64 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Ήσυχος Συνοδός</string>
+    <string name="dark_mode">ΣΚΟΤΕΙΝΗ ΘΕΜΑΤΙΚΗ</string>
+    <string name="notifications">ΕΙΔΟΠΟΙΗΣΕΙΣ</string>
+    <string name="emergency_contact_list">ΛΙΣΤΑ ΕΠΕΙΓΟΝΤΩΝ ΕΠΙΚΟΙΝΩΝΙΩΝ</string>
+    <string name="notification_message">Επιλέξτε ένα επείγον επαφή για να αποφύγετε το σίγαση του τηλεφώνου όταν καλούν.</string>
+    <string name="privacy_policy">ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</string>
+    <string name="privacy_message">Διαβάστε την τελευταία μας πολιτική</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="add">Προσθήκη</string>
+    <string name="schedule_name">Όνομα Προγράμματος</string>
+    <string name="Add_Schedules">Προσθήκη Προγραμμάτων</string>
+    <string name="initial_time">Αρχικός Χρόνος</string>
+    <string name="final_time">Τελικός Χρόνος</string>
+    <string name="silent_mode">Λειτουργία Σίγασης</string>
+    <string name="vibration_mode">Λειτουργία Δόνησης</string>
+    <string name="location">Τοποθεσία</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="everyday">Καθημερινά</string>
+    <string name="monday">Δευτέρα</string>
+    <string name="tuesday">Τρίτη</string>
+    <string name="wednesday">Τετάρτη</string>
+    <string name="thursday">Πέμπτη</string>
+    <string name="friday">Παρασκευή</string>
+    <string name="saturday">Σάββατο</string>
+    <string name="sunday">Κυριακή</string>
+    <string name="ok">Εντάξει</string>
+    <string name="app_icon">Εικονίδιο Εφαρμογής</string>
+    <string name="current_location">Μεταβείτε στην Τρέχουσα Τοποθεσία</string>
+    <string name="coordinates">Συντεταγμένες</string>
+    <string name="update_shedules">Ενημέρωση Προγραμμάτων</string>
+    <string name="update">Ενημέρωση</string>
+    <string name="contact_name">Όνομα Επαφής</string>
+    <string name="phone_number">Αριθμός Τηλεφώνου</string>
+    <string name="delete_contact">Διαγραφή Επαφής</string>
+    <string name="names">Ονόματα</string>
+    <string name="mode">Λειτουργία</string>
+    <string name="days">Ημέρες</string>
+    <string name="delete_schedule">Διαγραφή Προγράμματος</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Επιλέξτε γλώσσα</string>
+
+    <string name="Tutorial">Οδηγός</string>
+    <string name="Tutorial_text">Μάθετε πώς να χρησιμοποιείτε αυτήν την εφαρμογή</string>
+    <string name="permissions_check_required">Απαιτείται έλεγχος αδειών</string>
+    <string name="permission_des">Όλες οι απαραίτητες άδειες πρέπει να χορηγηθούν για την ομαλή λειτουργία των λειτουργιών της εφαρμογής.</string>
+
+</resources>

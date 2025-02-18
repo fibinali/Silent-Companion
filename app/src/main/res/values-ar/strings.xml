@@ -1,0 +1,82 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">رفيق صامت</string>
+    <string name="dark_mode">الوضع المظلم</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="emergency_contact_list">قائمة جهات الاتصال الطارئة</string>
+    <string name="notification_message">حدد جهة اتصال طارئة لمنع الهاتف من الصمت عند الاتصال بهم.</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="privacy_message">اقرأ أحدث سياساتنا المحدثة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="add">إضافة</string>
+    <string name="schedule_name">اسم الجدول</string>
+    <string name="Add_Schedules">إضافة الجداول</string>
+    <string name="initial_time">الوقت الأولي</string>
+    <string name="final_time">الوقت النهائي</string>
+    <string name="silent_mode">الوضع الصامت</string>
+    <string name="vibration_mode">وضع الاهتزاز</string>
+    <string name="location">الموقع</string>
+    <string name="cancel">إلغاء</string>
+    <string name="everyday">كل يوم</string>
+    <string name="monday">الاثنين</string>
+    <string name="tuesday">الثلاثاء</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="thursday">الخميس</string>
+    <string name="friday">الجمعة</string>
+    <string name="saturday">السبت</string>
+    <string name="sunday">الأحد</string>
+    <string name="ok">موافق</string>
+    <string name="app_icon">أيقونة التطبيق</string>
+    <string name="current_location">الذهاب إلى الموقع الحالي</string>
+    <string name="coordinates">الإحداثيات</string>
+    <string name="update_shedules">تحديث الجداول</string>
+    <string name="update">تحديث</string>
+    <string name="contact_name">اسم جهة الاتصال</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="delete_contact">حذف جهة الاتصال</string>
+    <string name="names">الأسماء</string>
+    <string name="mode">الوضع</string>
+    <string name="days">الأيام</string>
+    <string name="delete_schedule">حذف الجدول</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">اختر اللغة</string>
+
+    <string name="Tutorial">الدليل</string>
+    <string name="Tutorial_text">تعلم كيفية استخدام هذا التطبيق</string>
+    <string name="main_page">الصفحة الرئيسية</string>
+    <string name="settings_text">1. زر الإعدادات: اضغط على زر الإعدادات لتخصيص تفضيلات التطبيق، إدارة الإشعارات، وضبط الميزات الأخرى حسب احتياجاتك.</string>
+    <string name="schedule_text">2. الجداول: اعرض جميع الجداول المحفوظة هنا. يتضمن كل جدول الوقت، الموقع، وإعدادات الوضع الصامت لإدارة الصوت تلقائيًا في هاتفك.</string>
+    <string name="add_schedule_text">3. زر إضافة جدول: اضغط على زر إضافة جدول لإنشاء جدول جديد لوضع الصوت الصامت. حدد الوقت والموقع والأيام لأتمتة إعدادات الصوت في هاتفك.</string>
+    <string name="add_shedule_page">صفحة إضافة جدول</string>
+    <string name="settings_text1">1. الإعدادات: للوصول إلى إعدادات التطبيق لتكوين التفضيلات، إدارة الإشعارات، وتخصيص سلوك الوضع الصامت.</string>
+    <string name="schedule_nametext">2. اسم الجدول: أدخل اسمًا لجدولك لتتمكن من التعرف عليه بسهولة في قائمة الجداول المحفوظة.</string>
+    <string name="time_text">3. وقت البدء ووقت الانتهاء: حدد فترة الوقت التي سيتم فيها تفعيل وضع الصوت الصامت تلقائيًا.</string>
+    <string name="mode_text">4. وضع صامت أو اهتزاز: اختر ما إذا كان الجدول يجب أن ينشط وضع الصامت أو وضع الاهتزاز حسب تفضيلاتك.</string>
+    <string name="location_text">5. الموقع: اختر موقعًا سيتم تطبيق الجدول عليه. سيتحول الهاتف إلى وضع الصامت عند دخول المنطقة المحددة.</string>
+    <string name="days_text">6. اختر أيام الأسبوع: اختر الأيام التي يجب أن يكون هذا الجدول نشطًا فيها. يمكنك اختيار أيام معينة أو تطبيقه كل يوم.</string>
+    <string name="okBtn_text">7. زر OK: اضغط على زر OK لحفظ جدولك وتفعيله وفقًا للإعدادات المحددة.</string>
+    <string name="currentloc_text">1. الموقع الحالي: اضغط للحصول على موقعك الحالي. سيتم استخدامه كنقطة مركزية لمنطقة وضع الصوت الصامت.</string>
+    <string name="radius_text">2. اختر نصف القطر: اختر نصف القطر الذي سيتم فيه تفعيل وضع الصوت الصامت عند دخول المنطقة.</string>
+    <string name="okButton_text">3. زر OK لاختيار الموقع: اضغط على زر OK لتأكيد اختيار الموقع ونصف القطر.</string>
+    <string name="i_understand_it">أفهم ذلك</string>
+
+    <string name="permissions_check_required">مطلوب التحقق من الأذونات</string>
+    <string name="permission_des">يجب منح جميع الأذونات المطلوبة لتعمل ميزات التطبيق بسلاسة.</string>
+
+
+</resources>

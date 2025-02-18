@@ -1,0 +1,66 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+
+    <string name="app_name">সাইলেন্ট সঙ্গী</string>
+    <string name="dark_mode">ডার্ক মোড</string>
+    <string name="notifications">নোটিফিকেশন</string>
+    <string name="emergency_contact_list">জরুরি যোগাযোগ তালিকা</string>
+    <string name="notification_message">যখন তারা কল করবে তখন ফোন সাইলেন্ট করা বন্ধ করতে একটি জরুরি যোগাযোগ নির্বাচন করুন।</string>
+    <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="privacy_message">আমাদের সর্বশেষ আপডেট করা নীতি পড়ুন</string>
+    <string name="settings">সেটিংস</string>
+    <string name="add">যোগ করুন</string>
+    <string name="schedule_name">সিডিউল নাম</string>
+    <string name="Add_Schedules">সিডিউল যোগ করুন</string>
+    <string name="initial_time">প্রাথমিক সময়</string>
+    <string name="final_time">চূড়ান্ত সময়</string>
+    <string name="silent_mode">সাইলেন্ট মোড</string>
+    <string name="vibration_mode">ভাইব্রেশন মোড</string>
+    <string name="location">অবস্থান</string>
+    <string name="cancel">বাতিল</string>
+    <string name="everyday">প্রতিদিন</string>
+    <string name="monday">সোমবার</string>
+    <string name="tuesday">মঙ্গলবার</string>
+    <string name="wednesday">বুধবার</string>
+    <string name="thursday">বৃহস্পতিবার</string>
+    <string name="friday">শুক্রবার</string>
+    <string name="saturday">শনিবার</string>
+    <string name="sunday">রবিবার</string>
+    <string name="ok">ঠিক আছে</string>
+    <string name="app_icon">অ্যাপ আইকন</string>
+    <string name="current_location">বর্তমান অবস্থানে যান</string>
+    <string name="coordinates">সমন্বয়</string>
+    <string name="update_shedules">সিডিউল আপডেট করুন</string>
+    <string name="update">আপডেট</string>
+    <string name="contact_name">যোগাযোগের নাম</string>
+    <string name="phone_number">ফোন নম্বর</string>
+    <string name="delete_contact">যোগাযোগ মুছুন</string>
+    <string name="names">নাম</string>
+    <string name="mode">মোড</string>
+    <string name="days">দিন</string>
+    <string name="delete_schedule">সিডিউল মুছুন</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+
+    <string name="select_languages">ভাষা নির্বাচন করুন</string>
+
+    <string name="Tutorial">টিউটোরিয়াল</string>
+    <string name="Tutorial_text">এই অ্যাপটি কীভাবে ব্যবহার করবেন তা শিখুন</string>
+    <string name="permissions_check_required">অনুমতি যাচাই প্রয়োজন</string>
+    <string name="permission_des">অ্যাপের ফিচারগুলো সঠিকভাবে কাজ করার জন্য সমস্ত প্রয়োজনীয় অনুমতি প্রদান করতে হবে।</string>
+
+</resources>

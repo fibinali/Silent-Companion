@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Stille Metgezel</string>
+    <string name="dark_mode">DONKERE MODUS</string>
+    <string name="notifications">MELDINGEN</string>
+    <string name="emergency_contact_list">N noodcontactenlijst</string>
+    <string name="notification_message">Kies een noodcontact om te voorkomen dat de telefoon wordt gedempt wanneer ze bellen.</string>
+    <string name="privacy_policy">PRIVACYBELEID</string>
+    <string name="privacy_message">Lees ons nieuwste beleid</string>
+    <string name="settings">Instellingen</string>
+    <string name="add">Toevoegen</string>
+    <string name="schedule_name">Roosternaam</string>
+    <string name="Add_Schedules">Roosters Toevoegen</string>
+    <string name="initial_time">Starttijd</string>
+    <string name="final_time">Eindtijd</string>
+    <string name="silent_mode">Stille modus</string>
+    <string name="vibration_mode">Trilmodus</string>
+    <string name="location">Locatie</string>
+    <string name="cancel">Annuleren</string>
+    <string name="everyday">Elke dag</string>
+    <string name="monday">Maandag</string>
+    <string name="tuesday">Dinsdag</string>
+    <string name="wednesday">Woensdag</string>
+    <string name="thursday">Donderdag</string>
+    <string name="friday">Vrijdag</string>
+    <string name="saturday">Zaterdag</string>
+    <string name="sunday">Zondag</string>
+    <string name="ok">OK</string>
+    <string name="app_icon">App-pictogram</string>
+    <string name="current_location">Ga naar Huidige Locatie</string>
+    <string name="coordinates">Coördinaten</string>
+    <string name="update_shedules">Werk roosters bij</string>
+    <string name="update">Bijwerken</string>
+    <string name="contact_name">Contactnaam</string>
+    <string name="phone_number">Telefoonnummer</string>
+    <string name="delete_contact">Contact verwijderen</string>
+    <string name="names">Namen</string>
+    <string name="mode">Modus</string>
+    <string name="days">Dagen</string>
+    <string name="delete_schedule">Verwijder rooster</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Kies taal</string>
+    <string name="Tutorial">Tutorial</string>
+    <string name="Tutorial_text">Leer hoe je deze app gebruikt</string>
+    <string name="permissions_check_required">Vergunningscontrole vereist</string>
+    <string name="permission_des">Alle vereiste toestemmingen moeten worden verleend om de app-functionaliteiten soepel te laten werken.</string>
+
+</resources>

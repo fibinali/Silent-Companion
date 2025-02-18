@@ -1,0 +1,81 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">साइलेंट सहायक</string>
+    <string name="dark_mode">अंधेरा मोड</string>
+    <string name="notifications">सूचनाएँ</string>
+    <string name="emergency_contact_list">आपातकालीन संपर्क सूची</string>
+    <string name="notification_message">फोन को साइलेंट किए बिना कॉल करने पर उसे रोकने के लिए आपातकालीन संपर्क का चयन करें।</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="privacy_message">हमारी नवीनतम नीति पढ़ें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="add">जोड़ें</string>
+    <string name="schedule_name">समय सारणी का नाम</string>
+    <string name="Add_Schedules">समय सारणी जोड़ें</string>
+    <string name="initial_time">प्रारंभिक समय</string>
+    <string name="final_time">अंतिम समय</string>
+    <string name="silent_mode">साइलेंट मोड</string>
+    <string name="vibration_mode">वाइब्रेशन मोड</string>
+    <string name="location">स्थान</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="everyday">हर दिन</string>
+    <string name="monday">सोमवार</string>
+    <string name="tuesday">मंगलवार</string>
+    <string name="wednesday">बुधवार</string>
+    <string name="thursday">गुरुवार</string>
+    <string name="friday">शुक्रवार</string>
+    <string name="saturday">शनिवार</string>
+    <string name="sunday">रविवार</string>
+    <string name="ok">ठीक है</string>
+    <string name="app_icon">एप्लिकेशन आइकन</string>
+    <string name="current_location">वर्तमान स्थान पर जाएं</string>
+    <string name="coordinates">संपूर्णांक</string>
+    <string name="update_shedules">समय सारणी अपडेट करें</string>
+    <string name="update">अपडेट</string>
+    <string name="contact_name">संपर्क नाम</string>
+    <string name="phone_number">फोन नंबर</string>
+    <string name="delete_contact">संपर्क हटाएं</string>
+    <string name="names">नाम</string>
+    <string name="mode">मोड</string>
+    <string name="days">दिन</string>
+    <string name="delete_schedule">समय सारणी हटाएं</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">भाषा चुनें</string>
+
+    <string name="Tutorial">ट्यूटोरियल</string>
+    <string name="Tutorial_text">इस ऐप का उपयोग करना सीखें</string>
+    <string name="main_page">मुख्य पृष्ठ</string>
+    <string name="settings_text">1. सेटिंग्स बटन: सेटिंग्स बटन पर टैप करें ताकि आप ऐप की प्राथमिकताओं को कस्टमाइज़ कर सकें, सूचनाओं का प्रबंधन कर सकें और अन्य सुविधाओं को अपनी आवश्यकताओं के अनुसार समायोजित कर सकें।</string>
+    <string name="schedule_text">2. शेड्यूल: यहां अपने सभी सेव किए गए शेड्यूल देखें। प्रत्येक शेड्यूल में समय, स्थान और साइलेंट मोड की सेटिंग्स शामिल होती हैं, जो स्वचालित रूप से आपके फोन की ध्वनि को प्रबंधित करती हैं।</string>
+    <string name="add_schedule_text">3. शेड्यूल जोड़ने का बटन: एक नया साइलेंट मोड शेड्यूल बनाने के लिए शेड्यूल जोड़ने के बटन पर टैप करें। समय, स्थान और दिन सेट करें ताकि आप अपने फोन की ध्वनि सेटिंग्स को स्वचालित रूप से प्रबंधित कर सकें।</string>
+    <string name="add_shedule_page">शेड्यूल जोड़ने का पृष्ठ</string>
+    <string name="settings_text1">1. सेटिंग्स: ऐप सेटिंग्स तक पहुंचें ताकि आप प्राथमिकताओं को कॉन्फ़िगर कर सकें, सूचनाओं का प्रबंधन कर सकें और साइलेंट मोड के व्यवहार को कस्टमाइज़ कर सकें।</string>
+    <string name="schedule_nametext">2. शेड्यूल का नाम: अपने शेड्यूल का नाम दर्ज करें ताकि आप इसे सेव किए गए शेड्यूल की सूची में आसानी से पहचान सकें।</string>
+    <string name="time_text">3. शुरू होने का समय और समाप्ति का समय: वह समय सीमा निर्धारित करें जिसके दौरान साइलेंट मोड स्वचालित रूप से सक्रिय होगा।</string>
+    <string name="mode_text">4. साइलेंट या वाइब्रेशन मोड: यह चुनें कि शेड्यूल साइलेंट मोड को सक्रिय करेगा या वाइब्रेशन मोड को आपकी प्राथमिकता के आधार पर।</string>
+    <string name="location_text">5. स्थान: वह स्थान चुनें जहां शेड्यूल लागू होगा। फोन निर्दिष्ट क्षेत्र में प्रवेश करते समय साइलेंट मोड में बदल जाएगा।</string>
+    <string name="days_text">6. सप्ताह के दिन चुनें: वे दिन चुनें जिन पर यह शेड्यूल सक्रिय होना चाहिए। आप विशिष्ट दिन चुन सकते हैं या इसे हर दिन लागू कर सकते हैं।</string>
+    <string name="okBtn_text">7. OK बटन: शेड्यूल को सेव करने और चयनित सेटिंग्स के अनुसार इसे सक्रिय करने के लिए OK बटन पर टैप करें।</string>
+    <string name="currentloc_text">1. वर्तमान स्थान: अपना वर्तमान स्थान प्राप्त करने के लिए टैप करें। इसे साइलेंट मोड क्षेत्र के लिए केंद्रीय बिंदु के रूप में उपयोग किया जाएगा।</string>
+    <string name="radius_text">2. रेडियस चुनें: वह रेडियस चुनें जिसके भीतर साइलेंट मोड क्षेत्र में प्रवेश करते समय सक्रिय हो जाएगा।</string>
+    <string name="okButton_text">3. स्थान चयन के लिए OK बटन: अपने स्थान और रेडियस चयन की पुष्टि करने के लिए OK बटन पर टैप करें।</string>
+    <string name="i_understand_it">मुझे यह समझ में आ गया</string>
+    <string name="permissions_check_required">अनुमति जाँच आवश्यक</string>
+    <string name="permission_des">ऐप की सुविधाओं को सुचारु रूप से चलाने के लिए सभी आवश्यक अनुमतियों को प्रदान करना आवश्यक है।</string>
+
+
+</resources>

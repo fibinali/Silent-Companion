@@ -1,0 +1,169 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>System Default</item>
+        <item>Arabic</item>
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Spanish</item>
+        <item>Hindi</item>
+        <item>Bengali</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Japanese</item>
+        <item>German</item>
+        <item>Turkish</item>
+        <item>Korean</item>
+        <item>Italian</item>
+        <item>Malayalam</item>
+        <item>Thai</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Dutch</item>
+        <item>Greek</item>
+        <item>Indonesian</item>
+        <item>Tamil</item>
+        <item>Serbian</item>
+    </string-array>
+
+
+    <string name="app_name">Silent Companion</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="notifications">Notification</string>
+    <string name="emergency_contact_list">Emergency Contact List</string>
+    <string name="notification_message">Select an emergency contact to prevent the phone from being silenced when they call.</string>
+    <string name="privacy_policy">Privacy And Policy</string>
+    <string name="privacy_message">Read our latest policy updated</string>
+    <string name="settings">Settings</string>
+    <string name="add">add</string>
+    <string name="schedule_name">Schedule Name</string>
+    <string name="Add_Schedules">Add Schedules</string>
+    <string name="initial_time">Start Time</string>
+    <string name="final_time">Final Time</string>
+    <string name="silent_mode">Silent Mode</string>
+    <string name="vibration_mode">Vibration Mode</string>
+    <string name="location">Location</string>
+    <string name="cancel">Cancel</string>
+    <string name="everyday">Everyday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="ok">OK</string>
+    <string name="app_icon">App_Icon</string>
+    <string name="current_location">Go to Current Location</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="update_shedules">Update Schedules"</string>
+    <string name="update">Update</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="names">Names</string>
+    <string name="mode">Mode</string>
+    <string name="days">Days</string>
+    <string name="delete_schedule">delete_schedule</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Select Language</string>
+
+    <string name="privacy_policy_title" translatable="false">Privacy Policy</string>
+    <string name="last_updated" translatable="false">Last Updated: [25/01/2025]</string>
+    <string name="welcome_text" translatable="false">Welcome to Silent Companion! This privacy policy explains how we collect, use, and protect your information when you use our app.</string>
+
+    <!-- Section 1 -->
+    <string name="section_1_title" translatable="false">1. Introduction</string>
+    <string name="section_1_text" translatable="false">
+        Welcome to Silent Companion. Your privacy is important to us. This privacy policy explains how we collect, use, and protect your data when you use the app.
+    </string>
+
+    <!-- Section 2 -->
+    <string name="section_2_title" translatable="false">2. How We Use Your Information</string>
+    <string name="section_2_text" translatable="false">
+        The data collected by Silent Companion is used exclusively for the following purposes:
+        - Scheduling silent mode based on your preferred time and location.
+        - Allowing you to add emergency contacts for specific features.
+    </string>
+
+    <!-- Section 3 -->
+    <string name="section_3_title" translatable="false">3. Data Storage and Security</string>
+    <string name="section_3_text" translatable="false">
+        All data collected by Silent Companion is stored locally on your device. The app does not transmit, share, or store your information on external servers or third-party services. We implement reasonable security measures to protect your data, but you are responsible for maintaining the security of your device.
+    </string>
+
+    <!-- Section 4 -->
+    <string name="section_4_title" translatable="false">4. Location Permissions</string>
+    <string name="section_4_text" translatable="false">
+        Silent Companion requires access to your device’s location to offer location-based silent scheduling. This permission is essential for the app to function properly. The app does not store or transmit your location data; it is used only for the scheduling functionality.
+    </string>
+
+    <!-- Section 5 -->
+    <string name="section_5_title" translatable="false">5. Emergency Contact</string>
+    <string name="section_5_text" translatable="false">
+        Silent Companion allows you to add emergency contacts that may be used in case of urgent scheduling needs. You must grant permission for the app to access your contacts, and the data is stored locally on your device.
+    </string>
+
+    <!-- Section 6 -->
+    <string name="section_6_title" translatable="false">6. Third-Party Services</string>
+    <string name="section_6_text" translatable="false">
+        Silent Companion does not use any third-party services to collect, process, or store your data. All data is handled locally on your device. We do not share your data with external parties.
+    </string>
+
+    <!-- Section 7 -->
+    <string name="section_7_title" translatable="false">7. Data Retention</string>
+    <string name="section_7_text" translatable="false">
+        Silent Companion retains your data only as long as necessary to provide the app’s services. You can delete your data by uninstalling the app or manually removing it from your device. The app does not store data on external servers.
+    </string>
+
+    <!-- Section 8 -->
+    <string name="section_8_title" translatable="false">8. User Rights</string>
+    <string name="section_8_text" translatable="false">
+        You have the right to access, update, or delete the data stored locally on your device. You can also disable location permissions or emergency contacts at any time through the app’s settings. If you have concerns about your data, please contact us using the details below.
+    </string>
+
+    <!-- Section 9 -->
+    <string name="section_9_title" translatable="false">9. Contact Us</string>
+    <string name="section_9_text" translatable="false">
+        If you have any questions, concerns, or feedback about this privacy policy or the app, you can contact us at:<br />
+        Email: support@silentcompanion.com<br />
+        We will do our best to address your concerns promptly.
+    </string>
+
+    <string name="Tutorial">Tutorial</string>
+    <string name="Tutorial_text">Learn how to use this app</string>
+    <string name="main_page" translatable="false">Main page</string>
+    <string name="settings_text" translatable="false">1.Setting Button: Tap the Settings button to customize app preferences, manage notifications, and adjust other features according to your needs.</string>
+    <string name="schedule_text" translatable="false">2.Schedules: View all your saved schedules here. Each schedule includes time, location, and silent mode settings to automatically manage your phone\'s sound.</string>
+    <string name="add_schedule_text" translatable="false">3.Add Schedule Button: Tap the Add Schedule button to create a new silent mode schedule. Set the time, location, and days to automate your phone\'s sound settings.</string>
+    <string name="add_shedule_page" translatable="false">add shedule page</string>
+    <string name="settings_text1" translatable="false">1.Settings: Access app settings to configure preferences, manage notifications, and customize silent mode behavior.</string>
+    <string name="schedule_nametext" translatable="false">2.Schedule Name: Enter a name for your schedule to easily identify it in the list of saved schedules.</string>
+    <string name="time_text" translatable="false">3.Start Time and End Time: Set the time range during which the silent mode will be activated automatically.</string>
+    <string name="mode_text" translatable="false">4.Silent or Vibration Mode: Choose whether the schedule should activate silent mode or vibration mode based on your preference.</string>
+    <string name="location_text" translatable="false">5.Location: Select a location where the schedule should be applied. The phone will switch to silent mode when entering the specified area.</string>
+    <string name="days_text" translatable="false">6.Select Days of Week: Choose the days on which this schedule should be active. You can select specific days or apply it every day.</string>
+    <string name="okBtn_text" translatable="false">7.OK Button: Tap the OK button to save your schedule and activate it according to the selected settings.</string>
+    <string name="currentloc_text" translatable="false">1.Current Location: Tap to get your current location. This will be used as the center point for the silent mode area.</string>
+    <string name="radius_text" translatable="false">2.Select Radius: Choose the radius within which the silent mode will be activated when entering the area.</string>
+    <string name="okButton_text" translatable="false">3.OK Button for Location Select: Tap the OK button to confirm your location and radius selection.</string>
+    <string name="i_understand_it">I Understand it</string>
+    <string name="permissions_check_required">Permissions Check Required</string>
+    <string name="permission_des" translatable="false">All required permissions must be granted for the app features to work smoothly.</string>
+</resources>

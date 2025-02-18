@@ -1,0 +1,64 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">Sessiz Arkadaş</string>
+    <string name="dark_mode">KARANLIK MOD</string>
+    <string name="notifications">BİLDİRİMLER</string>
+    <string name="emergency_contact_list">ACİL DURUM İLETİŞİM LİSTESİ</string>
+    <string name="notification_message">Telefonunuzun, acil durum kişisi aradığında sessize alınmaması için bir acil durum kişisi seçin.</string>
+    <string name="privacy_policy">GİZLİLİK POLİTİKASI</string>
+    <string name="privacy_message">Son güncellenmiş politikamızı okuyun</string>
+    <string name="settings">Ayarlar</string>
+    <string name="add">Ekle</string>
+    <string name="schedule_name">Program Adı</string>
+    <string name="Add_Schedules">Programları Ekle</string>
+    <string name="initial_time">Başlangıç Zamanı</string>
+    <string name="final_time">Bitiş Zamanı</string>
+    <string name="silent_mode">Sessiz Modu</string>
+    <string name="vibration_mode">Titreşim Modu</string>
+    <string name="location">Konum</string>
+    <string name="cancel">İptal</string>
+    <string name="everyday">Her Gün</string>
+    <string name="monday">Pazartesi</string>
+    <string name="tuesday">Salı</string>
+    <string name="wednesday">Çarşamba</string>
+    <string name="thursday">Perşembe</string>
+    <string name="friday">Cuma</string>
+    <string name="saturday">Cumartesi</string>
+    <string name="sunday">Pazar</string>
+    <string name="ok">Tamam</string>
+    <string name="app_icon">Uygulama İkonu</string>
+    <string name="current_location">Mevcut Konuma Git</string>
+    <string name="coordinates">Koordinatlar</string>
+    <string name="update_shedules">Programları Güncelle</string>
+    <string name="update">Güncelle</string>
+    <string name="contact_name">İletişim Adı</string>
+    <string name="phone_number">Telefon Numarası</string>
+    <string name="delete_contact">İletişimi Sil</string>
+    <string name="names">İsimler</string>
+    <string name="mode">Mod</string>
+    <string name="days">Günler</string>
+    <string name="delete_schedule">Programı Sil</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">Dil Seç</string>
+    <string name="Tutorial">Eğitim</string>
+    <string name="Tutorial_text">Bu uygulamayı nasıl kullanacağınızı öğrenin</string>
+    <string name="permissions_check_required">İzin Kontrolü Gerekli</string>
+    <string name="permission_des">Uygulama özelliklerinin sorunsuz çalışması için tüm gerekli izinlerin verilmesi gerekmektedir.</string>
+
+
+</resources>

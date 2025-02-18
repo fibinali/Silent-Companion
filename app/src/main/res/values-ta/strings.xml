@@ -1,0 +1,63 @@
+<resources>
+    <string-array name="radius_values">
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>40m</item>
+        <item>50m</item>
+        <item>75m</item>
+        <item>100m</item>
+        <item>150m</item>
+        <item>200m</item>
+        <item>250m</item>
+        <item>300m</item>
+        <item>400m</item>
+        <item>500m</item>
+    </string-array>
+    <string name="app_name">சைலண்ட் கம்பெனியன்</string>
+    <string name="dark_mode">டார்க் மோடு</string>
+    <string name="notifications">அறிவிப்புகள்</string>
+    <string name="emergency_contact_list">அவசர தொடர்புகள் பட்டியல்</string>
+    <string name="notification_message">அவசர தொடர்புகளைத் தேர்வு செய்து, அவர்கள் அழைப்பது போதுமானால் உங்கள் தொலைபேசு அமைப்பு கம்பியடையாமல் இருக்க.</string>
+    <string name="privacy_policy">பிரைவேசி கொள்கை</string>
+    <string name="privacy_message">எங்கள் சமீபத்திய கொள்கையைப் படியுங்கள்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="add">சேர்க்கவும்</string>
+    <string name="schedule_name">அட்டவணை பெயர்</string>
+    <string name="Add_Schedules">அட்டவணைகளைச் சேர்க்கவும்</string>
+    <string name="initial_time">தொடக்க நேரம்</string>
+    <string name="final_time">இறுதி நேரம்</string>
+    <string name="silent_mode">சைலெண்ட் மோடு</string>
+    <string name="vibration_mode">பிணக்குதல் மோடு</string>
+    <string name="location">இடம்</string>
+    <string name="cancel">ரத்து செய்க</string>
+    <string name="everyday">ஒவ்வொரு நாளும்</string>
+    <string name="monday">திங்கள்</string>
+    <string name="tuesday">செவ்வாய்</string>
+    <string name="wednesday">புதன்</string>
+    <string name="thursday">வியாழன்</string>
+    <string name="friday">வெள்ளி</string>
+    <string name="saturday">சனி</string>
+    <string name="sunday">ஞாயிறு</string>
+    <string name="ok">சரி</string>
+    <string name="app_icon">அப் ஐகான்</string>
+    <string name="current_location">தற்போதைய இடத்திற்கு செல்லவும்</string>
+    <string name="coordinates">குறியீடுகள்</string>
+    <string name="update_shedules">அட்டவணைகளைப் புதுப்பிக்கவும்</string>
+    <string name="update">புதுப்பிக்கவும்</string>
+    <string name="contact_name">தொடர்பு பெயர்</string>
+    <string name="phone_number">தொலைபேசி எண்</string>
+    <string name="delete_contact">தொடர்பு அழிக்கவும்</string>
+    <string name="names">பெயர்கள்</string>
+    <string name="mode">மோடு</string>
+    <string name="days">நாள்கள்</string>
+    <string name="delete_schedule">அட்டவணை அழிக்கவும்</string>
+    <string name="osmdroid_base_path">/data/data/com.mobapps.silentcompanion/files/osmdroid</string>
+    <string name="select_languages">மொழி தேர்வு செய்யவும்</string>
+    <string name="Tutorial">கையேடு</string>
+    <string name="Tutorial_text">இந்த பயன்பாட்டைப் பயன்படுத்துவது எப்படி என்று கற்றுக் கொள்ளவும்</string>
+    <string name="permissions_check_required">அனுமதி சரிபார்ப்பு தேவையானது</string>
+    <string name="permission_des">ஆப்பின் அம்சங்கள் சரியாக செயல்பட அனைத்து தேவையான அனுமதிகளும் வழங்கப்பட வேண்டும்.</string>
+
+</resources>
