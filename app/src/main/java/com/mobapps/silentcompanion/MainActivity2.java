@@ -2,26 +2,28 @@ package com.mobapps.silentcompanion;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.app.role.RoleManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.TextView;
+
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -29,41 +31,52 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.snackbar.Snackbar;
-
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
-    private static final int REQUEST_CODE_CONTACTS = 101;
-    private static final int REQUEST_CODE_CALL_LOG = 102;
-    private static final int REQUEST_CODE_STORAGE = 103;
-
-    private static final int LOCATION_REQUEST_CODE = 1001; // Any unique request code
-
-
+    private static final String TAG = "MainActivity2";
     private RecyclerView recyclerView;
     private DatabaseHelper databaseHelper;
 
-    private static final int REQUEST_CODE_PERMISSIONS = 200;
-    private static final String TAG = "DialerApp";
+    private final ActivityResultLauncher<String[]> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
+                boolean allGranted = true;
+                boolean someDenied = false;
+
+                for (Map.Entry<String, Boolean> entry : result.entrySet()) {
+                    if (!entry.getValue()) {
+                        allGranted = false;
+                        someDenied = true;
+                    }
+                }
+
+                if (allGranted) {
+                    Log.d(TAG, "All permissions granted.");
+                    requestDefaultDialer();
+                } else if (someDenied) {
+                    showPermissionSettingsDialog();
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2); // Ensure this matches your layout file
+        setContentView(R.layout.activity_main2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        ImageButton addButton = findViewById(R.id.addbutton);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayShowTitleEnabled(false); // Disable the title
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
+        ImageButton addButton = findViewById(R.id.addbutton);
         recyclerView = findViewById(R.id.recycleview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -74,32 +87,12 @@ public class MainActivity2 extends AppCompatActivity {
             startActivity(intent);
         });
 
-        boolean isFirstLaunch = Settings.isFirstLaunch(this); // `this` refers to the current activity context
-        if (isFirstLaunch) {
-            // Optionally show the tutorial dialog
-            Settings.showTutorialDialog(this);
-        }
-        //checkAndEnableLocation();
+        requestAllPermissions();
+        checkAndRequestDndPermission(this);
 
-        // Request runtime permissions
-        requestPermissions();
-
-        // Request Default Dialer
-        requestDefaultDialer();
-
-        requestLocation();
-
-        requestContactsPermission();
-        requestCallLogPermission();
-        requestStoragePermission();
-    }
-    private void requestLocation(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) { // Android 10+
-            ActivityCompat.requestPermissions(this, new String[]{
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.FOREGROUND_SERVICE_LOCATION
-            }, LOCATION_REQUEST_CODE);
+        // Check if it's the first launch
+        if (com.mobapps.silentcompanion.Settings.isFirstLaunch(this)) {
+            com.mobapps.silentcompanion.Settings.showTutorialDialog(this);
         }
 
     }
@@ -107,70 +100,101 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         List<DatabaseHelper.Schedule> scheduleList = databaseHelper.readAllSchedules();
+
+        TextView emptyTextView = findViewById(R.id.emptyTextView); // Reference the TextView
+
+        if (scheduleList.isEmpty()) {
+            recyclerView.setVisibility(View.GONE);
+            emptyTextView.setVisibility(View.VISIBLE);
+        } else {
+            recyclerView.setVisibility(View.VISIBLE);
+            emptyTextView.setVisibility(View.GONE);
+        }
+
         ScheduleAdapter scheduleAdapter = new ScheduleAdapter(this, scheduleList);
         recyclerView.setAdapter(scheduleAdapter);
     }
 
-    /*private void checkAndEnableLocation() {
-        // Check for location permissions
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+    public static void checkAndRequestDndPermission(Context context) {
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-            requestLocationPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-            return;
-        }
-
-        // Check if location services are enabled
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        if (locationManager != null && !locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            Snackbar.make(findViewById(android.R.id.content), "Location is turned off. Enable it for the app to work properly.", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("Enable", v -> {
-                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivity(intent);
-                    }).show();
+        if (notificationManager != null && !notificationManager.isNotificationPolicyAccessGranted()) {
+            Intent intent = new Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Fix for Android 14+
+            context.startActivity(intent);
         }
     }
 
-    private final ActivityResultLauncher<String> requestLocationPermissionLauncher =
-            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
-                if (!isGranted) {
-                    Snackbar.make(findViewById(android.R.id.content), "Location permission is required for this app.", Snackbar.LENGTH_LONG).show();
-                } else {
-                    checkAndEnableLocation();
-                }
-            });
-    */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the toolbar
-        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    private void requestAllPermissions() {
+        List<String> permissionsNeeded = new ArrayList<>();
+        ;
 
-        if (id == R.id.action_settings) {
-            // Open the Settings page
-            Intent intent = new Intent(this, com.mobapps.silentcompanion.Settings.class);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            permissionsNeeded.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            permissionsNeeded.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { // Android 13+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.READ_MEDIA_IMAGES);
+            }
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.READ_MEDIA_VIDEO);
+            }
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.READ_MEDIA_AUDIO);
+            }
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.POST_NOTIFICATIONS);
+            }
+        } else { // For Android 12 and below
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+        }
+
+        // Fix: READ_CALL_LOG and READ_PHONE_STATE require MANAGE_OWN_CALLS in Android 10+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            permissionsNeeded.add(Manifest.permission.READ_CONTACTS);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            permissionsNeeded.add(Manifest.permission.READ_PHONE_STATE);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
+            permissionsNeeded.add(Manifest.permission.READ_CALL_LOG);
+
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.MANAGE_OWN_CALLS) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.MANAGE_OWN_CALLS);
+            }
+        }
+
+        if (!permissionsNeeded.isEmpty()) {
+            requestPermissionLauncher.launch(permissionsNeeded.toArray(new String[0]));
+        } else {
+            requestDefaultDialer();
+        }
+    }
+
+    private void requestDefaultDialer() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            RoleManager roleManager = (RoleManager) getSystemService(Context.ROLE_SERVICE);
+            if (roleManager != null && roleManager.isRoleAvailable(RoleManager.ROLE_DIALER) && !roleManager.isRoleHeld(RoleManager.ROLE_DIALER)) {
+                Intent intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_DIALER);
+                defaultDialerLauncher.launch(intent);
+            } else {
+                Log.d(TAG, "Already set as default dialer.");
+            }
+        } else {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS);
             startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void requestPermissions() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_CODE_PERMISSIONS);
         }
     }
 
-    // Register ActivityResultLauncher for the default dialer request
+    // Ensure ActivityResultLauncher is initialized in onCreate()
     private final ActivityResultLauncher<Intent> defaultDialerLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -182,68 +206,33 @@ public class MainActivity2 extends AppCompatActivity {
             }
     );
 
-    private void requestDefaultDialer() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            RoleManager roleManager = (RoleManager) getSystemService(Context.ROLE_SERVICE);
-            if (roleManager != null && roleManager.isRoleAvailable(RoleManager.ROLE_DIALER) &&
-                    !roleManager.isRoleHeld(RoleManager.ROLE_DIALER)) {
-                Intent intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_DIALER);
-                defaultDialerLauncher.launch(intent); // Launch intent using ActivityResultLauncher
-            } else {
-                Log.d(TAG, "Already set as default dialer.");
-            }
-        } else {
-            Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS);
-            startActivity(intent); // For older versions, open default apps settings
-        }
+    private void showPermissionSettingsDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Permissions Required")
+                .setMessage("Some permissions are denied. Please enable them in settings.")
+                .setPositiveButton("Go to Settings", (dialog, which) -> {
+                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    intent.setData(Uri.parse("package:" + getPackageName()));
+                    startActivity(intent);
+                })
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .show();
     }
 
-    private void requestContactsPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE_CONTACTS);
-        }
-    }
 
-    private void requestCallLogPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CALL_LOG}, REQUEST_CODE_CALL_LOG);
-        }
-    }
-
-    private void requestStoragePermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_STORAGE);
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return true;
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_CONTACTS) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d("Permissions", "Contacts permission granted.");
-            } else {
-                Log.d("Permissions", "Contacts permission denied.");
-            }
-        } else if (requestCode == REQUEST_CODE_CALL_LOG) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d("Permissions", "Call Log permission granted.");
-            } else {
-                Log.d("Permissions", "Call Log permission denied.");
-            }
-        } else if (requestCode == REQUEST_CODE_STORAGE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d("Permissions", "Storage permission granted.");
-            } else {
-                Log.d("Permissions", "Storage permission denied.");
-            }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(this, com.mobapps.silentcompanion.Settings.class);
+            startActivity(intent);
+            return true;
         }
-        else if (requestCode == REQUEST_CODE_PERMISSIONS) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG, "Permission granted.");
-            } else {
-                Toast.makeText(this, "Permission required to detect incoming calls.", Toast.LENGTH_LONG).show();
-            }
-        }
+        return super.onOptionsItemSelected(item);
     }
 }

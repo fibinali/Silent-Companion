@@ -265,9 +265,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Return true if insertion was successful
         return result != -1;
     }
-
-
-
-
-
 }

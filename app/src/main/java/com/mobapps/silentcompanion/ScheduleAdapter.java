@@ -111,6 +111,11 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
                             .show();
 
                     Toast.makeText(context, "Schedule deleted successfully", Toast.LENGTH_SHORT).show();
+
+                    // **Refresh MainActivity2 after deletion**
+                    Intent intent = new Intent(context, MainActivity2.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
                 } else {
                     Toast.makeText(context, "Failed to delete schedule", Toast.LENGTH_SHORT).show();
                 }

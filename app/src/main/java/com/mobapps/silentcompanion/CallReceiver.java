@@ -46,7 +46,7 @@ public class CallReceiver extends BroadcastReceiver {
                     new Handler().postDelayed(() -> {
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
                         Log.d("CallReceiver", "Silent mode re-enabled after 60 seconds.");
-                    }, 60000);
+                    }, 30000);
                 }
                 break;
             }

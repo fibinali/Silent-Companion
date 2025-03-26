@@ -33,9 +33,20 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
-public class SilentModeService extends Service {
 
-    private static final int REQUEST_LOCATION_PERMISSION = 1;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.location.Priority;
+import com.google.android.gms.tasks.Task;
+
+public class SilentModeService extends Service {
+    private FusedLocationProviderClient fusedLocationClient;
+    private LocationCallback locationCallback;
+
     private boolean isSilentModeActive = false;
     private final List<String[]> switchDataList = new ArrayList<>();
     private final Handler handler = new Handler();
@@ -47,21 +58,30 @@ public class SilentModeService extends Service {
         }
     };
 
-    public void turnOnSilentMode(Context context) {
+    public void turnOnSilentMode(Context context, String currentMode) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (notificationManager != null && notificationManager.isNotificationPolicyAccessGranted()) {
-            // Permission granted, change ringer mode
             AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             if (audioManager != null) {
-                audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                if ("vibration".equalsIgnoreCase(currentMode)) {
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                    Toast.makeText(context, "Vibration mode activated. To enable silent with vibration, please adjust your settings if needed.", Toast.LENGTH_LONG).show();
+                } else {
+                    // Default to silent mode
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                }
             }
         } else {
             // Permission not granted, ask user to enable it
             Intent intent = new Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            if ("vibration".equalsIgnoreCase(currentMode)) {
+                Toast.makeText(context, "Grant DND access for vibration mode in settings.", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(context, "Grant DND access permission in settings.", Toast.LENGTH_LONG).show();
+            }
             startActivity(intent);
-            Toast.makeText(this, "Grant DND access permission in settings.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -83,9 +103,10 @@ public class SilentModeService extends Service {
             String latitude = intent.getStringExtra("latitude");
             String longitude = intent.getStringExtra("longitude");
             String radius = intent.getStringExtra("radius");
+            String mode = intent.getStringExtra("mode");
 
             if (isChecked) {
-                switchDataList.add(new String[]{initialTime, finalTime, days, latitude, longitude, radius});
+                switchDataList.add(new String[]{initialTime, finalTime, days, latitude, longitude, radius,mode});
             } else {
                 switchDataList.removeIf(schedule -> schedule[0].equals(initialTime) && schedule[1].equals(finalTime) && schedule[2].equals(days));
             }
@@ -116,6 +137,7 @@ public class SilentModeService extends Service {
         boolean locationInRange = false; // To track if location is within range
         String activeInitialTime = "";
         String activeFinalTime = "";
+        String currentMode = "";
         int caseType = 0;
 
         // Iterate through the schedules
@@ -126,6 +148,7 @@ public class SilentModeService extends Service {
             String latitude = schedule[3];
             String longitude = schedule[4];
             String radius = schedule[5];
+            String mode = schedule[6];
 
             // Time-only case
             if (latitude.isEmpty() && longitude.isEmpty() && !startTime.isEmpty() && !endTime.isEmpty()) {
@@ -133,6 +156,7 @@ public class SilentModeService extends Service {
                     shouldTurnOnSilentMode = true;
                     activeInitialTime = startTime;
                     activeFinalTime = endTime;
+                    currentMode = mode;
                     caseType = 1;
                     break;
                 }
@@ -142,6 +166,7 @@ public class SilentModeService extends Service {
                 if (isCurrentDayInArray(scheduleDays) && isLocationInRange(latitude, longitude, radius)) {
                     shouldTurnOnSilentMode = true;
                     locationInRange = true;
+                    currentMode = mode;
                     caseType = 2;
                     break;
                 }
@@ -152,6 +177,7 @@ public class SilentModeService extends Service {
                     shouldTurnOnSilentMode = true;
                     activeInitialTime = startTime;
                     activeFinalTime = endTime;
+                    currentMode = mode;
                     locationInRange = true;
                     caseType = 3;
                     break;
@@ -161,11 +187,11 @@ public class SilentModeService extends Service {
 
         // Handle silent mode based on caseType
         if (caseType == 1) {
-            handleSilentMode(shouldTurnOnSilentMode, activeInitialTime, activeFinalTime);
+            handleSilentMode(shouldTurnOnSilentMode, activeInitialTime, activeFinalTime,currentMode);
         } else if (caseType == 2) {
-            handleSilentModeWithLocationOnly(shouldTurnOnSilentMode, locationInRange);
+            handleSilentModeWithLocationOnly(shouldTurnOnSilentMode, locationInRange,currentMode);
         } else if (caseType == 3) {
-            handleSilentModeWithTimeAndLocation(shouldTurnOnSilentMode, locationInRange, activeInitialTime, activeFinalTime);
+            handleSilentModeWithTimeAndLocation(shouldTurnOnSilentMode, locationInRange, activeInitialTime, activeFinalTime,currentMode);
         }
 
         // If no schedules are active, ensure silent mode is off
@@ -176,10 +202,9 @@ public class SilentModeService extends Service {
         }
     }
 
-    // Method to handle silent mode for Time-only case
-    private void handleSilentMode(boolean shouldTurnOnSilentMode, String activeInitialTime, String activeFinalTime) {
+    private void handleSilentMode(boolean shouldTurnOnSilentMode, String activeInitialTime, String activeFinalTime, String currentMode) {
         if (shouldTurnOnSilentMode && !isSilentModeActive) {
-            turnOnSilentMode(getApplicationContext());
+            turnOnSilentMode(getApplicationContext(), currentMode);
             isSilentModeActive = true;
             updateNotification("Silent Mode Activated", "Silent mode is ON from " + activeInitialTime + " to " + activeFinalTime);
         } else if (!shouldTurnOnSilentMode && isSilentModeActive) {
@@ -190,9 +215,9 @@ public class SilentModeService extends Service {
     }
 
     // Method to handle silent mode for Location-only case
-    private void handleSilentModeWithLocationOnly(boolean shouldTurnOnSilentMode, boolean locationInRange) {
+    private void handleSilentModeWithLocationOnly(boolean shouldTurnOnSilentMode, boolean locationInRange,String currentMode) {
         if (shouldTurnOnSilentMode && locationInRange && !isSilentModeActive) {
-            turnOnSilentMode(getApplicationContext());
+            turnOnSilentMode(getApplicationContext(), currentMode);
             isSilentModeActive = true;
             updateNotification("Silent Mode Activated", "Silent mode is ON at the location");
         } else if ((!shouldTurnOnSilentMode || !locationInRange) && isSilentModeActive) {
@@ -203,9 +228,9 @@ public class SilentModeService extends Service {
     }
 
     // Method to handle silent mode for Time and Location case
-    private void handleSilentModeWithTimeAndLocation(boolean shouldTurnOnSilentMode, boolean locationInRange, String activeInitialTime, String activeFinalTime) {
+    private void handleSilentModeWithTimeAndLocation(boolean shouldTurnOnSilentMode, boolean locationInRange, String activeInitialTime, String activeFinalTime,String currentMode) {
         if (shouldTurnOnSilentMode && locationInRange && !isSilentModeActive) {
-            turnOnSilentMode(getApplicationContext());
+            turnOnSilentMode(getApplicationContext(), currentMode);
             isSilentModeActive = true;
             updateNotification("Silent Mode Activated", "Silent mode is ON from " + activeInitialTime + " to " + activeFinalTime + " at the location");
         } else if ((!shouldTurnOnSilentMode || !locationInRange) && isSilentModeActive) {
@@ -306,100 +331,74 @@ public class SilentModeService extends Service {
         stopForeground(true);
     }
 
-    // Method to check if location is in range
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            LocationRequest locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 10000)
+                    .setMinUpdateIntervalMillis(5000)
+                    .build();
+
+            locationCallback = new LocationCallback() {
+                @Override
+                public void onLocationResult(LocationResult locationResult) {
+                    if (locationResult == null) {
+                        return;
+                    }
+                    for (Location location : locationResult.getLocations()) {
+                        Log.d("LocationListener", "Location changed: " + location.getLatitude() + ", " + location.getLongitude());
+                    }
+                }
+            };
+
+            fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null);
+        }
+    }
+
     public boolean isLocationInRange(String latitude, String longitude, String radius) {
         try {
-            // Check if permission is granted
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                     ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // Permission not granted, return false
                 Log.e("SilentModeService", "Location permissions not granted.");
-                return false; // Handle the case where permission isn't granted
+                return false;
             }
 
             double latitudeDouble = Double.parseDouble(latitude);
             double longitudeDouble = Double.parseDouble(longitude);
             float radiusFloat = Float.parseFloat(radius);
 
-            // Get the location manager system service
-            LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-            // Check if the location service is available
-            if (locationManager == null) {
-                Log.e("SilentModeService", "Location Manager is not available");
-                return false;
+            Task<Location> locationTask = fusedLocationClient.getLastLocation();
+            while (!locationTask.isComplete()) {
+                // Wait for location result
             }
 
-            Location currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
+            Location currentLocation = locationTask.getResult();
             if (currentLocation != null) {
                 Location targetLocation = new Location("TargetLocation");
                 targetLocation.setLatitude(latitudeDouble);
                 targetLocation.setLongitude(longitudeDouble);
 
-                // Calculate the distance between current location and target location
                 float distance = currentLocation.distanceTo(targetLocation);
-
-                return distance <= radiusFloat; // True if within range
+                return distance <= radiusFloat;
             }
-        } catch (SecurityException e) {
-            Log.e("SilentModeService", "Location permission error: " + e.getMessage());
         } catch (Exception e) {
             Log.e("SilentModeService", "Error calculating location: " + e.getMessage());
         }
-        return false; // Default if there's an error or location is out of range
-    }
-
-    // LocationListener to handle location updates
-    private final LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            // Handle location change here
-            Log.d("LocationListener", "Location changed: " + location.getLatitude() + ", " + location.getLongitude());
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-            // Handle status change if needed
-        }
-
-        @Override
-        public void onProviderEnabled(@NonNull String provider) {
-            // Handle provider enabled if needed
-        }
-
-        @Override
-        public void onProviderDisabled(@NonNull String provider) {
-            // Handle provider disabled if needed
-        }
-    };
-
-
-
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        // Register the LocationListener when the service is created
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
-            // Register the LocationListener
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 10, locationListener);
-        }
+        return false;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(silentModeChecker);
-        stopNotification();
-        // Unregister the LocationListener when the service is destroyed
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        locationManager.removeUpdates(locationListener);
+
+        if (fusedLocationClient != null && locationCallback != null) {
+            fusedLocationClient.removeLocationUpdates(locationCallback);
+        }
     }
 
     @Override

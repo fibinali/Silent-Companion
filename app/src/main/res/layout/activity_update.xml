@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/Add_Schedules"
+        app:title="@string/update_shedules"
         app:titleMarginStart="10dp"
         />
 
